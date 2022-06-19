@@ -1,0 +1,24 @@
+{
+  "name": "parcel-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon test.js",
+    "dev-ts": "nodemon --exec 'deno run' test.ts"
+  },
+  "type": "module", "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "b.js": "^0.0.1",
+    "nodemon": "^2.0.15"
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.5.14",
+    "sass": "^1.49.9",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.3"
+  }
+}

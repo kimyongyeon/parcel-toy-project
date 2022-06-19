@@ -1,0 +1,171 @@
+$flexbox-line-color: black;
+$flexbox-bg-color: white;
+$li-line-color: red;
+
+ul {
+  padding: 0px;
+  margin: 0px;
+  background-image: url("./stacked-waves-haikei.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h2 {
+}
+
+li {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  width: 200px;
+  height: 250px;
+  text-align: center;
+  overflow: auto;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// flexbox 기본 틀 만들기
+// 중앙+가운데 정렬하기
+// 오른쪽+가운데 정렬하기
+// 왼쪽+가운데 정렬하기
+
+@mixin flex-align($x, $y) {
+  justify-content: $x;
+  align-items: $y;
+}
+
+.flexbox-center {
+  display: flex;
+  flex-wrap: wrap;
+  @include flex-align(center, center);
+  border: 1px solid $flexbox-line-color;
+  li {
+    border: 1px solid $li-line-color;
+  }
+}
+.flexbox-left {
+  display: flex;
+  @include flex-align(flex-start, center);
+  border: 1px solid $flexbox-line-color;
+  li {
+    border: 1px solid $li-line-color;
+  }
+}
+.flexbox-right {
+  display: flex;
+  @include flex-align(flex-end, center);
+  border: 1px solid $flexbox-line-color;
+  li {
+    border: 1px solid $li-line-color;
+  }
+}
+.flexbox-space-around {
+  display: flex;
+  @include flex-align(space-around, center);
+  border: 1px solid $flexbox-line-color;
+  li {
+    border: 1px solid $li-line-color;
+  }
+}
+.flexbox-space-between {
+  display: flex;
+  @include flex-align(space-between, center);
+  border: 1px solid $flexbox-line-color;
+  li {
+    border: 1px solid $li-line-color;
+  }
+}
+
+.custom-shape-divider-top-1648462841 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: -1;
+}
+
+.custom-shape-divider-top-1648462841 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 150px;
+}
+
+.custom-shape-divider-top-1648462841 .shape-fill {
+  fill: #ff52a2;
+}
+
+.card {
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+  background: #ff876e;
+  width: 100%;
+  height: 100px;
+  padding: 0px;
+
+  .left {
+    border: 3px solid red;
+    display: flex;
+    height: inherit;
+    align-items: start;
+    h1 {
+      padding: 0px;
+      margin: 0px;
+      border: 1px solid black;
+    }
+  }
+
+  .center {
+    // border: 1px solid red;
+    text-align: center;
+  }
+
+  .right {
+    // border: 1px solid red;
+    text-align: center;
+  }
+}
+.login-form {
+  border: 1px solid black;
+  margin-top: 5px;
+  margin-left: 20px;
+
+  width: 200px;
+  padding: 0px;
+
+  h1 {
+    padding: 0;
+    // border: 1px solid black;
+  }
+
+  input {
+    margin-top: 5px;
+    display: block;
+    width: inherit;
+  }
+
+  .button-form {
+    padding: 0px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    button {
+      flex: 1;
+    }
+  }
+}
+  .detail {
+  position: absolute;
+  top: 150px;
+  left: 250px;
+  border: 1px solid black;
+}
